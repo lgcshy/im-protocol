@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package livekit;
+option go_package = "github.com/livekit/protocol/livekit";
+option csharp_namespace = "LiveKit.Proto";
+option ruby_package = "LiveKit::Proto";
+
+import "livekit_models.proto";
+import "livekit_recording.proto";
+
+message WebhookEvent {
+  // one of room_started, room_finished, participant_joined, participant_left, recording_started, recording_finished
+  string event = 1;
+
+  Room room = 2;
+
+  // set when event is participant_*
+  ParticipantInfo participant = 3;
+
+  // set when event is recording_*
+  RecordingInfo recording_info = 5;
+
+  // unique event uuid
+  string id = 6;
+
+  // timestamp in seconds
+  int64 created_at = 7;
+}
