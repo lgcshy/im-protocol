@@ -57,10 +57,10 @@ func Proto() error {
 		"--twirp_opt=paths=source_relative",
 		"--plugin=go=" + protocGoPath,
 		"--plugin=twirp=" + twirpPath,
-		//"-I=C:\\Users\\4658\\go\\bin",
-		//"-I=C:\\Users\\4658\\protoc-3.19.4-win64\\include\\google\\",
+		"-I=C:\\Users\\4658\\go\\bin",
+		"-I=C:\\Users\\4658\\protoc-3.19.4-win64\\include\\google\\",
 		"-I=.",
-		//"-I=C:\\Users\\4658\\go\\src",
+		"-I=C:\\Users\\4658\\go\\src",
 	}, twirpProtoFiles...)
 	cmd := exec.Command(protoc, args...)
 	connectStd(cmd)
@@ -75,10 +75,10 @@ func Proto() error {
 		"--go-grpc_opt=paths=source_relative",
 		"--plugin=go=" + protocGoPath,
 		"--plugin=go-grpc=" + protocGrpcGoPath,
-		//"-I=C:\\Users\\4658\\go\\bin",
-		//"-I=C:\\Users\\4658\\protoc-3.19.4-win64\\include\\google\\",
+		"-I=C:\\Users\\4658\\go\\bin",
+		"-I=C:\\Users\\4658\\protoc-3.19.4-win64\\include\\google\\",
 		"-I=.",
-		//"-I=C:\\Users\\4658\\go\\src",
+		"-I=C:\\Users\\4658\\go\\src",
 	}, grpcProtoFiles...)
 	cmd = exec.Command(protoc, args...)
 	connectStd(cmd)

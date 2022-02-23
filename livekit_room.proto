@@ -173,13 +173,52 @@ message Proto {
   bytes body = 4;
 }
 
+// im msg type
+enum MESSAGE_TYPE {
+  TEXT = 0; //文本 图片 语音 视频 音乐 图文 表情 位置
+  PICTURE = 1;
+  VOICE = 2;
+  //VIDEO = 3;
+  MUSIC = 4;
+  EMOTION = 5;
+  LOCATION = 6;
+}
+
+// text message
+message TextMessage {
+  string content = 1;
+}
+
+message PictureMessage {
+
+}
+
+message From {
+  uint64 id = 1;
+  string identity = 2;
+  string name = 3;
+  string avatar = 4;
+}
+
+message Target {
+  uint64 id = 1;
+  string identity = 2;
+  string name = 3;
+  string avatar = 4;
+}
+
 message PushMsgRequest {
-  repeated string keys = 1;
-  int32 protoOp = 2;
-  Proto proto = 3;
+  oneof message {
+    TextMessage text = 1;
+    PictureMessage  picture = 2;
+  }
+  repeated string keys = 3;
   string room = 4;
   bytes data = 5;
   string identity = 6;
+  string content = 7;
+  From from = 8;
+  Target to = 9;
 }
 
 message PushMsgReply {}
@@ -189,6 +228,7 @@ message BroadcastRequest {
   string identity = 2;
   Proto proto = 3;
   bytes data = 4;
+  string content = 5;
 }
 
 message BroadcastReply{}
@@ -198,6 +238,23 @@ message BroadcastRoomRequest {
   string identity = 2;
   Proto proto = 3;
   bytes data = 4;
+  string content = 5;
 }
 
 message BroadcastRoomReply{}
+
+message PushMsg {
+  oneof message {
+    TextMessage text = 1;
+    PictureMessage pic = 2;
+  }
+  enum Type {
+    PUSH = 0;
+    ROOM = 1;
+    BROADCAST = 2;
+  }
+  Type type = 3;
+  From from = 4;
+  Target to = 5;
+  string data = 6;
+}
