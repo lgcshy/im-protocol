@@ -84,6 +84,8 @@ message RTCNodeMessage {
     PushMsgRequest push_msg = 13;
     BroadcastRoomRequest broadcast_room = 14;
     BroadcastRequest broadcast = 15;
+    EndSession end_session = 16;
+    Subscribe  subscribe = 17;
   }
 }
 
@@ -97,6 +99,7 @@ message SignalNodeMessage {
     PushMsgRequest    push_msg = 5;
     BroadcastRoomRequest broadcast_room = 6;
     BroadcastRoomRequest broadcast = 7;
+    Subscribe  subscribe = 8;
   }
 }
 
@@ -146,4 +149,10 @@ message RecordingResponse {
 }
 
 message KeepAlive {
+}
+
+message Subscribe {
+  string room_name = 1;
+  string identity = 2;
+  string node_id = 3;
 }
