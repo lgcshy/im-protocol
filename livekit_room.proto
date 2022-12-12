@@ -239,6 +239,7 @@ message BroadcastRoomRequest {
   Proto proto = 3;
   bytes data = 4;
   string content = 5;
+  string type = 6;
 }
 
 message BroadcastRoomReply{}
@@ -258,3 +259,20 @@ message PushMsg {
   Target to = 5;
   string data = 6;
 }
+
+message WhiteboardRequest {
+  oneof message {
+    TextMessage text = 1;
+    PictureMessage  picture = 2;
+  }
+  repeated string keys = 3;
+  string room = 4;
+  bytes data = 5;
+  string identity = 6;
+  string content = 7;
+  From from = 8;
+  Target to = 9;
+  string type = 10;
+}
+
+message WhiteboardReply {}

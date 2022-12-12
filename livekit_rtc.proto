@@ -38,6 +38,7 @@ message SignalRequest {
     JoinRoom  join_room = 15;
     LeaveRoom  leave_room = 16;
     PushMsgRequest push = 17;
+    WhiteboardRequest whiteboard = 18;
   }
 }
 
