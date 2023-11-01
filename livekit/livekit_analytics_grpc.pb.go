@@ -4,7 +4,7 @@
 // - protoc             v3.21.4
 // source: livekit_analytics.proto
 
-package protocol
+package livekit
 
 import (
 	context "context"
