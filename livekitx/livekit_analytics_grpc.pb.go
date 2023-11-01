@@ -4,7 +4,7 @@
 // - protoc             v3.21.4
 // source: livekit_analytics.proto
 
-package livekit
+package livekitx
 
 import (
 	context "context"
@@ -36,7 +36,7 @@ func NewAnalyticsRecorderServiceClient(cc grpc.ClientConnInterface) AnalyticsRec
 }
 
 func (c *analyticsRecorderServiceClient) IngestStats(ctx context.Context, opts ...grpc.CallOption) (AnalyticsRecorderService_IngestStatsClient, error) {
-	stream, err := c.cc.NewStream(ctx, &AnalyticsRecorderService_ServiceDesc.Streams[0], "/livekit.AnalyticsRecorderService/IngestStats", opts...)
+	stream, err := c.cc.NewStream(ctx, &AnalyticsRecorderService_ServiceDesc.Streams[0], "/livekitx.AnalyticsRecorderService/IngestStats", opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -70,7 +70,7 @@ func (x *analyticsRecorderServiceIngestStatsClient) CloseAndRecv() (*emptypb.Emp
 }
 
 func (c *analyticsRecorderServiceClient) IngestEvents(ctx context.Context, opts ...grpc.CallOption) (AnalyticsRecorderService_IngestEventsClient, error) {
-	stream, err := c.cc.NewStream(ctx, &AnalyticsRecorderService_ServiceDesc.Streams[1], "/livekit.AnalyticsRecorderService/IngestEvents", opts...)
+	stream, err := c.cc.NewStream(ctx, &AnalyticsRecorderService_ServiceDesc.Streams[1], "/livekitx.AnalyticsRecorderService/IngestEvents", opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -192,7 +192,7 @@ func (x *analyticsRecorderServiceIngestEventsServer) Recv() (*AnalyticsEvents, e
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var AnalyticsRecorderService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "livekit.AnalyticsRecorderService",
+	ServiceName: "livekitx.AnalyticsRecorderService",
 	HandlerType: (*AnalyticsRecorderServiceServer)(nil),
 	Methods:     []grpc.MethodDesc{},
 	Streams: []grpc.StreamDesc{

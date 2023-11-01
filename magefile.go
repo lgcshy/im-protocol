@@ -28,7 +28,7 @@ func Proto() error {
 	}
 
 	fmt.Println("generating protobuf")
-	target := "livekit"
+	target := "livekitx"
 	if err := os.MkdirAll(target, 0755); err != nil {
 		return err
 	}
