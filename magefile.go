@@ -20,7 +20,6 @@ func Proto() error {
 		"livekit_room.proto",
 	}
 	grpcProtoFiles := []string{
-		"livekit_analytics.proto",
 		"livekit_internal.proto",
 		"livekit_model.proto",
 		"livekit_rtc.proto",
