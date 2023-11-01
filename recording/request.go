@@ -7,7 +7,7 @@ import (
 
 	"google.golang.org/protobuf/proto"
 
-	"github.com/livekit/protocol/livekit"
+	"github.com/lgcshy/protocol/livekit"
 	"github.com/livekit/protocol/utils"
 )
 

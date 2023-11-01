@@ -1,4 +1,4 @@
-module github.com/livekit/protocol
+module github.com/lgcshy/protocol
 
 go 1.16
 
