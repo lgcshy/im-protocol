@@ -9,8 +9,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/livekit/protocol/auth"
-	"github.com/livekit/protocol/webhook"
+	"github.com/lgcshy/protocol/auth"
+	"github.com/lgcshy/protocol/webhook"
 )
 
 func TestWebHook(t *testing.T) {

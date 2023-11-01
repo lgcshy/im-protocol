@@ -7,7 +7,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/livekit/protocol/auth"
+	"github.com/lgcshy/protocol/auth"
 )
 
 func TestFileBasedKeyProvider(t *testing.T) {

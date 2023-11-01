@@ -13,7 +13,7 @@ import (
 	"google.golang.org/protobuf/encoding/protojson"
 	"google.golang.org/protobuf/proto"
 
-	"github.com/livekit/protocol/auth"
+	"github.com/lgcshy/protocol/auth"
 )
 
 type Notifier interface {

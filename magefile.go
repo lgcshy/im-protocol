@@ -16,14 +16,14 @@ var Default = Proto
 // regenerate protobuf
 func Proto() error {
 	twirpProtoFiles := []string{
-		"livekit_recording.proto",
-		"livekit_room.proto",
+		"livekitx_recording.proto",
+		"livekitx_room.proto",
 	}
 	grpcProtoFiles := []string{
-		"livekit_internal.proto",
-		"livekit_model.proto",
-		"livekit_rtc.proto",
-		"livekit_webhook.proto",
+		"livekitx_internal.proto",
+		"livekitx_model.proto",
+		"livekitx_rtc.proto",
+		"livekitx_webhook.proto",
 	}
 
 	fmt.Println("generating protobuf")

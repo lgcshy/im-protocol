@@ -7,7 +7,7 @@ import (
 	"github.com/stretchr/testify/require"
 	"gopkg.in/square/go-jose.v2/json"
 
-	"github.com/livekit/protocol/auth"
+	"github.com/lgcshy/protocol/auth"
 )
 
 func TestVerifier(t *testing.T) {
