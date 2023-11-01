@@ -5,7 +5,7 @@ option go_package = "github.com/lgcshy/protocol/livekit";
 option csharp_namespace = "LiveKit.Proto";
 option ruby_package = "LiveKit::Proto";
 
-import "livekit_models.proto";
+import "livekit_model.proto";
 
 // Room service that can be performed on any node
 // they are Twirp-based HTTP req/responses

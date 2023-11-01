@@ -22,7 +22,7 @@ func Proto() error {
 	grpcProtoFiles := []string{
 		"livekit_analytics.proto",
 		"livekit_internal.proto",
-		"livekit_models.proto",
+		"livekit_model.proto",
 		"livekit_rtc.proto",
 		"livekit_webhook.proto",
 	}
